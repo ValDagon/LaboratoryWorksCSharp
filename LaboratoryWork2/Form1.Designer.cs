@@ -38,8 +38,6 @@
             this.WTextBox = new System.Windows.Forms.TextBox();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.Result = new System.Windows.Forms.Label();
-            this.ResultButton = new System.Windows.Forms.Button();
-            this.AllClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // XLabel
@@ -86,7 +84,6 @@
             // 
             this.XTextBox.Location = new System.Drawing.Point(58, 12);
             this.XTextBox.Name = "XTextBox";
-            this.XTextBox.ReadOnly = true;
             this.XTextBox.Size = new System.Drawing.Size(100, 20);
             this.XTextBox.TabIndex = 4;
             // 
@@ -94,7 +91,6 @@
             // 
             this.YTextBox.Location = new System.Drawing.Point(58, 46);
             this.YTextBox.Name = "YTextBox";
-            this.YTextBox.ReadOnly = true;
             this.YTextBox.Size = new System.Drawing.Size(100, 20);
             this.YTextBox.TabIndex = 5;
             // 
@@ -102,7 +98,6 @@
             // 
             this.ZTextBox.Location = new System.Drawing.Point(58, 78);
             this.ZTextBox.Name = "ZTextBox";
-            this.ZTextBox.ReadOnly = true;
             this.ZTextBox.Size = new System.Drawing.Size(100, 20);
             this.ZTextBox.TabIndex = 6;
             // 
@@ -110,7 +105,6 @@
             // 
             this.WTextBox.Location = new System.Drawing.Point(58, 112);
             this.WTextBox.Name = "WTextBox";
-            this.WTextBox.ReadOnly = true;
             this.WTextBox.Size = new System.Drawing.Size(100, 20);
             this.WTextBox.TabIndex = 7;
             // 
@@ -133,33 +127,11 @@
             this.Result.TabIndex = 9;
             this.Result.Text = "Результат:";
             // 
-            // ResultButton
-            // 
-            this.ResultButton.Location = new System.Drawing.Point(16, 379);
-            this.ResultButton.Name = "ResultButton";
-            this.ResultButton.Size = new System.Drawing.Size(246, 23);
-            this.ResultButton.TabIndex = 10;
-            this.ResultButton.Text = "Выполнить";
-            this.ResultButton.UseVisualStyleBackColor = true;
-            this.ResultButton.Click += new System.EventHandler(this.ResultButton_Click);
-            // 
-            // AllClearButton
-            // 
-            this.AllClearButton.Location = new System.Drawing.Point(268, 379);
-            this.AllClearButton.Name = "AllClearButton";
-            this.AllClearButton.Size = new System.Drawing.Size(227, 23);
-            this.AllClearButton.TabIndex = 11;
-            this.AllClearButton.Text = "Очистить всё";
-            this.AllClearButton.UseVisualStyleBackColor = true;
-            this.AllClearButton.Click += new System.EventHandler(this.AllClearButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 412);
-            this.Controls.Add(this.AllClearButton);
-            this.Controls.Add(this.ResultButton);
+            this.ClientSize = new System.Drawing.Size(507, 386);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.WTextBox);
@@ -190,8 +162,6 @@
         private System.Windows.Forms.TextBox WTextBox;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Label Result;
-        private System.Windows.Forms.Button ResultButton;
-        private System.Windows.Forms.Button AllClearButton;
     }
 }
 
