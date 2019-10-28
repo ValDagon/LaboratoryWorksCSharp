@@ -17,25 +17,26 @@ namespace LaboratoryWork3
         private void button1_Click(object sender, EventArgs e)
         {
             ResultTextBox.Clear();
-            // Получение исходных данных из TextBox
+
             double x = Convert.ToDouble(XTextBox.Text);
             double y = Convert.ToDouble(YTextBox.Text);
             double z = Convert.ToDouble(ZTextBox.Text);
 
-            // Ввод исходных данных в окно результатов
+
             ResultTextBox.Text += "При X = " + XTextBox.Text + Environment.NewLine;
             ResultTextBox.Text += "При Y = " + YTextBox.Text + Environment.NewLine;
             ResultTextBox.Text += "При Z = " + ZTextBox.Text + Environment.NewLine;
 
-            // Определение номера выбранной функции
+
             int RadioButtonValue = 0;
             if (radioButton1.Checked) RadioButtonValue = 0;
             else if (radioButton2.Checked) RadioButtonValue = 1;
             else if (radioButton3.Checked) RadioButtonValue = 2;
 
-            // Вычисление U
+
             double u = 0;
             double Fx;
+
             switch (RadioButtonValue)
             {
                 case 0:
