@@ -19,13 +19,11 @@ namespace LaboratoryWorks5
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int count = 0;
+            label1.Text = "Количество цифр в строке: ";
 
             foreach (char c in listBox1.SelectedItem.ToString())
             {
-                if (Char.IsDigit(c)) count += 1;
-
-                label1.Text = "Количество символов в строке: " + count.ToString();
+                if (Char.IsDigit(c)) label1.Text +=  c.ToString();
             }
         }
     }
