@@ -38,6 +38,7 @@
             this.WTextBox = new System.Windows.Forms.TextBox();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
             this.Result = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // XLabel
@@ -127,11 +128,22 @@
             this.Result.TabIndex = 9;
             this.Result.Text = "Результат:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(16, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(223, 30);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Выполнить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 386);
+            this.ClientSize = new System.Drawing.Size(507, 421);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.WTextBox);
@@ -162,6 +174,7 @@
         private System.Windows.Forms.TextBox WTextBox;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.Label Result;
+        private System.Windows.Forms.Button button1;
     }
 }
 

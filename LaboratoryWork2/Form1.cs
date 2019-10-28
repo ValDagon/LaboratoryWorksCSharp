@@ -12,6 +12,10 @@ namespace LaboratoryWork2
 
         public void Form1_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             var x = 0.4 * Math.Pow(10, 4);
             XTextBox.Text = x.ToString();
 
@@ -27,7 +31,6 @@ namespace LaboratoryWork2
             WTextBox.Text = w.ToString();
 
             ResultTextBox.Text = "X: " + x + Environment.NewLine + "Y: " + y + Environment.NewLine + "Z: " + z + Environment.NewLine + "W:" + w.ToString();
-
         }
     }
 }
