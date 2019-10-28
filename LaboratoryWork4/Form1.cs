@@ -32,7 +32,7 @@ namespace LaboratoryWork4
                 double y = Math.Pow(a * x, 3) + Math.Pow(Math.Cos(Math.Pow(x, 3) - b), 2);
 
                 textBox5.Text += "x=" + Convert.ToString(x) + "; y=" + Convert.ToString(y) + Environment.NewLine;
-                x = x + dx;
+                x += dx;
             }
         }
     }
