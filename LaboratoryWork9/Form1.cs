@@ -1,5 +1,4 @@
 ﻿using System;
-
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,13 +10,11 @@ namespace LaboratoryWork9
         {
             InitializeComponent();
 
-            p1 = new Pen(Color.Brown, 5);
-            p2 = new Pen(Color.Green, 3);
-            p2.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            p3 = new Pen(Color.Orange, 6);
-            p4 = new Pen(Color.Red, 2);
+            p1 = new Pen(Color.Green, 3);
+            p1.DashStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            p2 = new Pen(Color.Red, 2);
             b1 = new SolidBrush(Color.White);
-            p5 = new Pen(Color.Black, 2);
+            p3 = new Pen(Color.Black, 2);
 
             this.Load += this.Form_Load;
             this.Paint += this.Form_Paint;
@@ -26,8 +23,6 @@ namespace LaboratoryWork9
         private Pen p1;
         private Pen p2;
         private Pen p3;
-        private Pen p4;
-        private Pen p5;
         private SolidBrush b1;
 
         public override Size MinimumSize
@@ -50,10 +45,10 @@ namespace LaboratoryWork9
         private void Form_Paint(object sender, PaintEventArgs e)
         {
             //вызываем метод отрисовки снеговиков, аргументы - экземпляр класса Graphics и количество снеговиков
-            DrawSnowman(e.Graphics, 10);
+            Draw(e.Graphics, 10);
         }
 
-        private void DrawSnowman(Graphics e, int count)
+        private void Draw(Graphics e, int count)
         {
             int diam;//диаметр
             Point location;//координаты валунов
@@ -69,9 +64,9 @@ namespace LaboratoryWork9
                 e.FillEllipse(b1, location.X, location.Y, diam, diam);
                 diam = 100;//уменьшаем диаметр валуна
                 //отрисовка глаз, носа, рта и пуговиц
-                e.DrawLine(p2, location.X + diam - 5, this.ClientSize.Height - 500, location.X + diam - 5, this.ClientSize.Height);
-                e.DrawLine(p4, location.X + 5, location.Y - 100, location.X + diam + 7, location.Y - 100);
-                e.DrawEllipse(p5, location.X + 15, location.Y + 5, 20, 20);
+                e.DrawLine(p1, location.X + diam - 5, this.ClientSize.Height - 500, location.X + diam - 5, this.ClientSize.Height);
+                e.DrawLine(p2, location.X + 5, location.Y - 100, location.X + diam + 7, location.Y - 100);
+                e.DrawEllipse(p3, location.X + 15, location.Y + 5, 20, 20);
                 distance += 100;//двигаем следующего снеговика
             }
         }
